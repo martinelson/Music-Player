@@ -1,0 +1,81 @@
+.catalog {
+  position: fixed;
+  background-color: white;
+  top: 0;
+  left: 0;
+  width: 25rem;
+  height: 100%;
+  box-shadow: 2px 2px 50px gray;
+  overflow: scroll;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  opacity: 0;
+  h2 {
+    padding: 2rem;
+  }
+}
+
+.active-catalog {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.catalog-song {
+  display: flex;
+  align-items: center;
+  padding: 2rem 2rem 2rem;
+  cursor: pointer;
+  transition: background 0.5s ease;
+  img {
+    width: 40%;
+    box-shadow: 5px 5px 10px gray;
+  }
+  &:hover {
+    background: rgba(139, 125, 161, 0.4);
+    img {
+      box-shadow: 2px 2px 5px gray;
+      width: 43%;
+    }
+  }
+}
+
+.song-description {
+  padding-left: 1rem;
+  h3 {
+    font-size: 0.8rem;
+  }
+  h4 {
+    padding-top: 0.3rem;
+    font-size: 0.5rem;
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 100%;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 20px;
+  border: transparent;
+}
+
+.selected {
+  background: rgba(159, 169, 212, 0.6);
+}
+
+@media screen and (max-width: 800px) {
+  .catalog {
+    width: 100%;
+  }
+}
